@@ -1,6 +1,12 @@
 import React from "react";
-import D3blackbox from "d3blackbox";
-import * as d3 from "d3";
+import D3blackbox from '../D3Blackbox';
+import { select } from 'd3-selection'
+import { hierarchy, cluster } from 'd3-hierarchy'
+const d3 = {
+  select,
+  hierarchy,
+  cluster
+}
 
 const Dendrogram = D3blackbox(function (anchor, props, state) {
   const svg = d3.select(anchor.current);

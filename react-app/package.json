@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "d3blackbox": "^1.1.0",
+    "d3-hierarchy": "^1.1.8",
+    "d3-selection": "^1.4.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8"
