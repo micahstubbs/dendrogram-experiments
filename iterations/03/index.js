@@ -42,7 +42,6 @@ function draw(data) {
     .attr('width', width)
     .attr('height', height)
 
-
   svg
     .append('rect')
     .attr('width', width)
