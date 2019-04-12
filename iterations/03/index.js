@@ -1,9 +1,11 @@
 // define some constants
 const width = 960
 const height = 500
-const margin = { top: 0, left: 0, bottom: 0, right: 0 }
+const margin = { top: 40, left: 40, bottom: 0, right: 0 }
 const innerWidth = width - margin.left - margin.right
 const innerHeight = height - margin.top - margin.bottom
+const fontSize = 10
+const magicWidthDivisor = 1.35
 
 // load the data
 d3.json('analytics.json').then(data => draw(data))
@@ -16,9 +18,12 @@ function draw(data) {
       .sort(
         (a, b) => a.height - b.height || a.data.name.localeCompare(b.data.name)
       )
+    console.log('root.height', root.height)
+    console.log('root', root)
     root.dx = 10
     root.dy = innerWidth / (root.height + 1)
-    return d3.cluster().nodeSize([root.dx, root.dy])(root)
+    // .nodeSize([root.dx, root.dy])
+    return d3.cluster().size([innerHeight, innerWidth / magicWidthDivisor])(root)
   }
 
   // call the tree layout function on the data
@@ -37,20 +42,27 @@ function draw(data) {
     .append('svg')
     .attr('width', width)
     .attr('height', height)
-    .append('g')
 
-  svg.append('rect')
+
+  svg
+    .append('rect')
     .attr('width', width)
     .attr('height', height)
     .style('fill', 'none')
     .style('stroke', 'gray')
     .style('stroke-width', '1px')
 
+  const magicXTranslateDivisor = 6
+  const xTranslate = root.dy / magicXTranslateDivisor + margin.left
+  const yTranslate = root.dx - x0 + margin.top
   const g = svg
     .append('g')
     .attr('font-family', 'sans-serif')
-    .attr('font-size', 10)
-    .attr('transform', `translate(${root.dy / 3},${root.dx - x0})`)
+    .attr('font-size', fontSize)
+    .attr(
+      'transform',
+      `translate(${xTranslate},${yTranslate})`
+    )
 
   const link = g
     .append('g')
