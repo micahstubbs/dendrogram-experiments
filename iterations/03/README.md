@@ -8,4 +8,7 @@ D3’s [cluster layout](https://github.com/d3/d3-hierarchy/blob/master/README.md
 
 ---
 
-inspired by https://observablehq.com/@d3/cluster-dendrogram and the example [Ch. 5, Fig. 15 - D3.js in Action](https://bl.ocks.org/emeeks/68728605f74113bc38dc)
+inspired by 
+- https://observablehq.com/@d3/cluster-dendrogram 
+- the example [Ch. 5, Fig. 15 - D3.js in Action](https://bl.ocks.org/emeeks/68728605f74113bc38dc) 
+- this search https://blockbuilder.org/search?text=dendrogram&thumb=true&d3version=v4
