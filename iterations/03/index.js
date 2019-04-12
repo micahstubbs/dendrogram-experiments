@@ -42,13 +42,14 @@ function draw(data) {
     .attr('width', width)
     .attr('height', height)
 
-  svg
-    .append('rect')
-    .attr('width', width)
-    .attr('height', height)
-    .style('fill', 'none')
-    .style('stroke', 'gray')
-    .style('stroke-width', '1px')
+  // a gray border for debugging the layout
+  // svg
+  //   .append('rect')
+  //   .attr('width', width)
+  //   .attr('height', height)
+  //   .style('fill', 'none')
+  //   .style('stroke', 'gray')
+  //   .style('stroke-width', '1px')
 
   const magicXTranslateDivisor = 6
   const xTranslate = root.dy / magicXTranslateDivisor + margin.left
