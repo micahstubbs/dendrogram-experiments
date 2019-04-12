@@ -4,7 +4,7 @@ const height = 500
 const margin = { top: 40, left: 40, bottom: 0, right: 0 }
 const innerWidth = width - margin.left - margin.right
 const innerHeight = height - margin.top - margin.bottom
-const fontSize = 10
+const fontSize = 12
 const magicWidthDivisor = 1.35
 
 // load the data
