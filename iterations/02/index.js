@@ -1,6 +1,6 @@
 // define some constants
 const width = 960
-const height = 2500
+const height = 500
 const margin = { top: 0, left: 0, bottom: 0, right: 50 }
 const innerWidth = width - margin.left - margin.right
 const innerHeight = height - margin.top - margin.bottom
