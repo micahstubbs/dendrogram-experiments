@@ -107,6 +107,4 @@ function draw(data) {
     .clone(true)
     .lower()
     .attr('stroke', 'white')
-
-  // return svg.node()
 }
