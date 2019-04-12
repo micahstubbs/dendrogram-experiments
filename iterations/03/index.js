@@ -22,7 +22,6 @@ function draw(data) {
     console.log('root', root)
     root.dx = 10
     root.dy = innerWidth / (root.height + 1)
-    // .nodeSize([root.dx, root.dy])
     return d3.cluster().size([innerHeight, innerWidth / magicWidthDivisor])(root)
   }
 
