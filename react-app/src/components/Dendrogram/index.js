@@ -108,8 +108,6 @@ const Dendrogram = D3blackbox(function (anchor, props, state) {
       .lower()
       .attr('stroke', 'white')
   }
-
-  // the rest of your D3 code
 });
 
 export default Dendrogram;
