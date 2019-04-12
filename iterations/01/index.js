@@ -1,7 +1,7 @@
 // define some constants
 const width = 960
 const height = 2500
-const margin = { top: 0, left: 0, bottom: 0, right: 80 }
+const margin = { top: 0, left: 0, bottom: 0, right: 0 }
 const innerWidth = width - margin.left - margin.right
 const innerHeight = height - margin.top - margin.bottom
 
@@ -69,7 +69,6 @@ function draw(data) {
     .attr('width', width)
     .attr('height', height)
     .append('g')
-    .attr('transform', 'translate(40,0)')
 
   const g = svg
     .append('g')
